@@ -243,7 +243,7 @@ class Http
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
         if (defined('CURLOPT_FOLLOWLOCATION')) {
-            curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
+            curl_setopt($curl, CURLOPT_FOLLOWLOCATION, false);
             curl_setopt($curl, CURLOPT_MAXREDIRS, $this->maxRedirects);
         }
         if ($this->requestOptions && is_array($this->requestOptions))
